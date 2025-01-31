@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Modifier le Film</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Modifier le Film</h1>
+    <form id="formModification">
+        <label for="nomfilm">Titre:</label>
+        <input type="text" id="nomfilm" name="nomfilm"><br>
+        
+        <label for="nomrealis">Réalisateur:</label>
+        <input type="text" id="nomrealis" name="nomrealis"><br>
+        
+        <label for="datesor">Date de sortie:</label>
+        <input type="text" id="datesor" name="datesor"><br>
+        
+        <label for="genre">Genre:</label>
+        <input type="text" id="genre" name="genre"><br>
+        
+        <label for="statue">Statut:</label>
+        <input type="text" id="statue" name="statue"><br>
+        
+        <label for="filmimg">Image URL:</label>
+        <input type="text" id="filmimg" name="filmimg"><br>
+        
+        <button type="button" onclick="sauvegarderModification()"></button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
