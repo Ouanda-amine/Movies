@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>MyMovies - Movie List</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" id="nv">
+        <div class="container-fluid">
+            <img src="filmicon.png" alt="Movie Icon" style="width: 60px; height: 60px;">
+            <h1 class="navbar-brand" id="titre">MyMovies</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="movies.html">Our Films</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <div class="row" id="movieList"></div>
+        <div class="text-end mt-4 mb-5">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#movieModal">
+                Add Movie
+            </button>
+        </div>
+    </main>
+
+    <!-- Movie Modal -->
+    <div class="modal fade" id="movieModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Add Movie</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="movieForm">
+                        <div class="mb-3">
+                            <label for="movieTitle" class="form-label">Movie Title</label>
+                            <input type="text" class="form-control" id="movieTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="movieImage" class="form-label">Image URL</label>
+                            <input type="url" class="form-control" id="movieImage" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="director" class="form-label">Director</label>
+                            <input type="text" class="form-control" id="director" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="releaseDate" class="form-label">Release Date</label>
+                            <input type="date" class="form-control" id="releaseDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="genre" class="form-label">Genre</label>
+                            <input type="text" class="form-control" id="genre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Status</label>
+                            <select class="form-select" id="status" required>
+                                <option value="Released">Released</option>
+                                <option value="Coming Soon">Coming Soon</option>
+                                <option value="In Production">In Production</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveMovie">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="movies.js"></script>
+</body>
+</html>
